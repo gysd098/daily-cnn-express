@@ -56,6 +56,9 @@ try:
         2. 기사 제목에 나온 주요 경제 용어(예: Big Tech, Wall Street, Inflation 등)가 있다면 고등학생이 이해하기 쉽게 한 줄로 풀어서 설명해줘.
         3. 각 기사의 원문 링크는 요약본 바로 옆이나 아래에 그대로 유지해줘.
         4. 친근하고 격려하는 말투(~요, ~습니다)를 사용해줘.
+        5. 10 단어로 요약해줘
+        6. 답변할 때 볼드체()나 글머리 기호 같은 마크다운 형식을 절대 사용하지 말고, 평문(Plain text)으로만 작성해 줘.
+
 
         [CNN 뉴스 목록]
         {news_context}
@@ -81,7 +84,7 @@ try:
         msg = MIMEMultipart()
         msg['From'] = SENDER_EMAIL
         msg['To'] = RECEIVER_EMAIL
-        msg['Subject'] = "[TEST]CNN summary"
+        msg['Subject'] = "[CNN summary]"
 
         msg.attach(MIMEText(mail_txt, 'plain', 'utf-8'))
 
